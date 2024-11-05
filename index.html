@@ -28,6 +28,8 @@
     <!-- Welcome Section -->
     <div id="welcome-section">
       <div class="heroimg animate__animated animate__backInLeft"></div>
+      <div id="greeting"></div>
+      <!-- Greeting message will appear here -->
       <div>
         <h1>Welcome to My Portfolio</h1>
         <p>
@@ -134,5 +136,27 @@
     <footer>
       <p>&copy; 2024 Debashis Dhali. All rights reserved.</p>
     </footer>
+    <script>
+      // Function to set greeting message based on the time of day
+      function setGreeting() {
+        const greetingElement = document.getElementById("greeting");
+        const now = new Date();
+        const hour = now.getHours();
+        let greeting;
+
+        if (hour >= 5 && hour < 12) {
+          greeting = "Good Morning";
+        } else if (hour >= 12 && hour < 18) {
+          greeting = "Good Afternoon";
+        } else {
+          greeting = "Good Evening";
+        }
+
+        greetingElement.textContent = greeting;
+      }
+
+      // Run the function to set the greeting message when the page loads
+      document.addEventListener("DOMContentLoaded", setGreeting);
+    </script>
   </body>
 </html>
