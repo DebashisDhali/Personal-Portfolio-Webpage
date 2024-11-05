@@ -5,39 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav id="navbar">
+      <span id="port-text">Portfolio</span>
         <a href="#welcome-section">Welcome</a>
         <a href="#projects">Projects</a>
-        <a id="profile-link" href="https://github.com/yourusername" target="_blank">My GitHub</a>
+        <a id="profile-link" href="#footer" >Contacts</a>
     </nav>
 
-    <section id="welcome-section">
+    <!-- Welcome Section -->
+    <div id="welcome-section">
+      <div class=" heroimg animate__animated animate__backInLeft"></div>
+      <div>
         <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm [Your Name]. I am a web developer passionate about creating beautiful and functional websites.</p>
-    </section>
+        <p><span id="hi">Hi,</span> I'm <span id="name">Debashis Dhali</span>. I am a web developer passionate about creating beautiful and functional websites.</p>
+        </div>
+    </div>
 
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
         <div class="project-tile">
-            <a href="https://example.com/project1" target="_blank">
-                <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                <h3>Project 1</h3>
+            <a href="https://brilliantpasswordgenerator.netlify.app/" target="_blank">
+                <img id="img1" src="https://raw.githubusercontent.com/DebashisDhali/Projects-Front-Image/refs/heads/main/Password%20Generator.png">
+                <h3>Password Generator</h3>
             </a>
-            <p>A brief description of the project.</p>
+            <p>Generate secure passwords effortlessly with this Password Generator app. By default, it creates lowercase passwords (a-z), but you can customize your password by selecting additional options such as uppercase letters, numbers, and special characters. Easily copy the generated password to use anywhere with a single click!</p>
         </div>
         <div class="project-tile">
-            <a href="https://example.com/project2" target="_blank">
-                <img src="https://via.placeholder.com/300x200" alt="Project 2">
-                <h3>Project 2</h3>
+            <a href="https://easycolorpalette.netlify.app/" target="_blank">
+                <img src="https://raw.githubusercontent.com/DebashisDhali/Projects-Front-Image/refs/heads/main/Simple%20Color%20Palette.png" alt="Project 2">
+                <h3>Color Palette Generator</h3>
             </a>
-            <p>A brief description of the project.</p>
+            <p>Create beautiful color palettes effortlessly with this "SimplecolorPalette" generator app. Just click the generate button to instantly produce a fresh palette, and easily copy the color codes for use in any style section of your code!</p>
         </div>
+         <div class="project-tile">
+            <a href="https://soulmateclock.netlify.app/" target="_blank">
+                <img src="https://raw.githubusercontent.com/DebashisDhali/Projects-Front-Image/refs/heads/main/soulmate%20Clock.png" alt="Project 1">
+                <h3>Soulmate Clock</h3>
+            </a>
+            <p>"SoulmateClock" is a sleek, analog timepiece designed to keep you perfectly in sync with every moment. With its elegant design and flawless timekeeping, it's your ideal companion for staying punctual and on track</p>
+        </div>
+        <div class="project-tile">
+            <a href="https://personalqr.netlify.app/" target="_blank">
+                <img src="https://raw.githubusercontent.com/DebashisDhali/Projects-Front-Image/refs/heads/main/QR%20code%20generator.png" alt="Project 2">
+                <h3>Random QR Code Generator</h3>
+            </a>
+            <p>Turn any text, link, or input into a unique QR code with this QR Code Generator app. Simply enter your desired text or URL, and instantly generate a custom QR code ready for use anywhere!</p>
+        </div>
+        <!-- Add more projects as needed -->
     </section>
+ <div class="footer" id="footer">
+      <h1>Let's work together....</h1>
+      <ul>
+        <a href="https://bd.linkedin.com/"
+          ><li><i class="fa-brands fa-linkedin"></i> Linkedin</li></a
+        >
+        <a href="https://x.com/dhali_deba2024"
+          ><li><i class="fa-brands fa-twitter"></i> Twiter</li></a
+        >
+        <!-- Problem.Fixed it -->
+        <!-- Done -->
+        <a href="mailto:debashisdhali104035@gmail.com"
+          ><li><i class="fa-solid fa-at"></i> SendMail</li></a
+        >
+      </ul>
+      <ul>
+        <a href="https://github.com/DebashisDhali"
+          ><li><i class="fa-brands fa-github"></i> Github</li></a
+        >
+        <a href="#"
+          ><li><i class="fa-solid fa-mobile-screen"></i>Mobile</li></a
+        >
+      </ul>
+    </div>
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Debashis Dhali. All rights reserved.</p>
     </footer>
 
 </body>

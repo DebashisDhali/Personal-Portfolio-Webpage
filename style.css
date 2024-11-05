@@ -1,18 +1,38 @@
-
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration:none;
+}
+html,body{
+    font-family:roboto;
+    scroll-behavior: smooth;
 }
 
+#name{
+    font-size:30px;
+    font-weight:600;
+}
+#hi{
+    font-size:50px;
+    font-weight:600;
+}
+/* Navbar */
+#port-text{
+    font-weight:1000;
+    margin-right:35rem;
+}
 #navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    background-color: #333;
+        z-index:.75;
+        background-color: rgb(65, 172, 211);
     color: white;
     text-align: center;
     padding: 10px;
+    margin-bottom:2px;
 }
 
 #navbar a {
@@ -25,6 +45,19 @@
     color: #ddd;
 }
 
+.heroimg {
+    height: 25rem;
+    width: 20rem;
+    /* background-color: blue; */
+    background-image: url(https://raw.githubusercontent.com/DebashisDhali/Html-CSS-10-Projects/refs/heads/New/imagess/Surjo.jpg);
+    background-size: cover;
+    border-radius: 15rem;
+    margin-left: 1.5rem;
+
+
+}
+/* Welcome Section */
+
 #welcome-section {
     display: flex;
     flex-direction: column;
@@ -32,8 +65,8 @@
     align-items: center;
     text-align: center;
     height: 100vh;
-    background-color: #f4f4f9;
-    color: #333;
+        background-color: #2b3767;
+    color: white;
     padding: 20px;
 }
 
@@ -49,12 +82,13 @@
 /* Projects Section */
 #projects {
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: #224153b6;
     text-align: center;
+    margin-bottom:-25px;
 }
 
 #projects h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 30px;
 }
 
@@ -76,12 +110,49 @@
 .project-tile h3 {
     font-size: 1.5rem;
     margin: 15px 0;
+    color:blue;
 }
 
 .project-tile p {
     padding: 10px 15px;
     color: #666;
 }
+.footer {
+    height: 25rem;
+    background-color: #2f344a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 6rem;
+    margin-top: 2rem;
+}
+
+.footer h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    gap: 3rem;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Footer */
 footer {
