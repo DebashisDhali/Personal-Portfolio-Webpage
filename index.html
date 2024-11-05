@@ -15,6 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -109,28 +116,43 @@
       <!-- Add more projects as needed -->
     </section>
     <div class="footer" id="footer">
-      <h1>Let's work together....</h1>
-      <ul>
-        <a href="https://bd.linkedin.com/"
-          ><li><i class="fa-brands fa-linkedin"></i> Linkedin</li></a
-        >
-        <a href="https://x.com/dhali_deba2024"
-          ><li><i class="fa-brands fa-twitter"></i> Twiter</li></a
-        >
-        <!-- Problem.Fixed it -->
-        <!-- Done -->
-        <a href="mailto:debashisdhali104035@gmail.com"
-          ><li><i class="fa-solid fa-at"></i> SendMail</li></a
-        >
-      </ul>
-      <ul>
-        <a href="https://github.com/DebashisDhali"
-          ><li><i class="fa-brands fa-github"></i> Github</li></a
-        >
-        <a href="#"
-          ><li><i class="fa-solid fa-mobile-screen"></i>Mobile</li></a
-        >
-      </ul>
+      <div>
+        <h1>Let's work together....</h1>
+        <ul>
+          <a href="https://bd.linkedin.com/"
+            ><li><i class="fa-brands fa-linkedin"></i> Linkedin</li></a
+          >
+          <a href="https://x.com/dhali_deba2024"
+            ><li><i class="fa-brands fa-twitter"></i> Twiter</li></a
+          >
+          <!-- Problem.Fixed it -->
+          <!-- Done -->
+          <a href="mailto:debashisdhali104035@gmail.com"
+            ><li><i class="fa-solid fa-at"></i> SendMail</li></a
+          >
+        </ul>
+        <ul>
+          <a href="https://github.com/DebashisDhali"
+            ><li><i class="fa-brands fa-github"></i> Github</li></a
+          >
+          <a href="#"
+            ><li><i class="fa-solid fa-mobile-screen"></i> Mobile</li></a
+          >
+        </ul>
+      </div>
+
+      <form name="submit-to-google-sheet">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
     <!-- Footer Section -->
     <footer>
@@ -154,9 +176,27 @@
 
         greetingElement.textContent = greeting;
       }
-
+      setGreeting();
       // Run the function to set the greeting message when the page loads
-      document.addEventListener("DOMContentLoaded", setGreeting);
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycby3pIwpVChhAcDiPDotokYBuHiObHf8ssrLDGWHW5BIkoXWaKnMDl8A578s-9r5IJVw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            alert("Form submitted successfully!");
+            form.reset(); // Clear the form fields after submission
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            alert("There was an error submitting the form.");
+          });
+      });
     </script>
   </body>
 </html>
